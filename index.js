@@ -4,6 +4,7 @@ const espacio = document.getElementById('espacio')
 const saludo = document.getElementById('saludo')
 let traducir = document.getElementById('traducir')
 let opcion = document.getElementById('exampleFormControlSelect1')
+const API_KEY = process.env.KEY
 
 const funcion = () => {
     if (espacio.value === '') {
@@ -16,7 +17,7 @@ const funcion = () => {
             "headers": {
                 "content-type": "application/octet-stream",
                 "x-rapidapi-host": "systran-systran-platform-for-language-processing-v1.p.rapidapi.com",
-                "x-rapidapi-key": "d64bb7c315mshf1292430f74a7c1p1e5733jsn825b6f82c7ed",
+                "x-rapidapi-key": API_KEY,
                 "useQueryString": true
             }, "params": {
                 "source": `${opcion.value}`,
